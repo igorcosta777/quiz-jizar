@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Interativo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TELA INICIAL -->
+        <section id="inicio" class="tela ativa">
+            <div class="card inicio-card">
+
+                <span class="tag">✨ Descubra mais</span>
+
+                <h1>Vamos começar?</h1>
+
+                <p>
+                    Responda algumas perguntas rápidas e descubra
+                    o que pode fazer mais sentido para você.
+                </p>
+
+                <button id="btnComecar" class="btn principal">
+                    Começar
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- QUIZ 1 -->
+        <section id="quiz1" class="tela">
+            <div class="card quiz-card">
+
+                <div class="progresso">
+                    <span>1 de 3</span>
+                    <div class="barra">
+                        <div class="barra-preenchida" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <h2>Como você se sente atualmente?</h2>
+
+                <div class="opcoes">
+
+                    <button class="opcao" data-quiz="1">
+                        😔 Não estou muito bem
+                    </button>
+
+                    <button class="opcao" data-quiz="1">
+                        😐 Estou passando por algumas dificuldades
+                    </button>
+
+                    <button class="opcao" data-quiz="1">
+                        🙂 Estou bem, mas quero melhorar
+                    </button>
+
+                    <button class="opcao" data-quiz="1">
+                        😃 Estou muito bem
+                    </button>
+
+                </div>
+
+                <button class="btn continuar" disabled>
+                    Continuar
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- QUIZ 2 -->
+        <section id="quiz2" class="tela">
+            <div class="card quiz-card">
+
+                <div class="progresso">
+                    <span>2 de 3</span>
+                    <div class="barra">
+                        <div class="barra-preenchida" style="width: 66%"></div>
+                    </div>
+                </div>
+
+                <h2>O que você gostaria de melhorar?</h2>
+
+                <div class="opcoes">
+
+                    <button class="opcao" data-quiz="2">
+                        ❤️ Minha vida emocional
+                    </button>
+
+                    <button class="opcao" data-quiz="2">
+                        🧠 Minha autoestima
+                    </button>
+
+                    <button class="opcao" data-quiz="2">
+                        🤝 Meus relacionamentos
+                    </button>
+
+                    <button class="opcao" data-quiz="2">
+                        🌱 Meu desenvolvimento pessoal
+                    </button>
+
+                </div>
+
+                <button class="btn continuar" disabled>
+                    Continuar
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- QUIZ 3 -->
+        <section id="quiz3" class="tela">
+            <div class="card quiz-card">
+
+                <div class="progresso">
+                    <span>3 de 3</span>
+                    <div class="barra">
+                        <div class="barra-preenchida" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <h2>Você gostaria de dar o próximo passo?</h2>
+
+                <div class="opcoes">
+
+                    <button class="opcao" data-quiz="3">
+                        Sim, quero começar
+                    </button>
+
+                    <button class="opcao" data-quiz="3">
+                        Quero entender melhor
+                    </button>
+
+                    <button class="opcao" data-quiz="3">
+                        Ainda tenho algumas dúvidas
+                    </button>
+
+                </div>
+
+                <button class="btn continuar" disabled>
+                    Ver resultado
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- TELA FINAL -->
+        <section id="final" class="tela">
+
+            <div class="card final-card">
+
+                <div class="final-imagem">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+                        alt="Imagem representando um novo começo"
+                    >
+                </div>
+
+                <div class="final-conteudo">
+
+                    <span class="tag">✨ Seu próximo passo</span>
+
+                    <h2>
+                        Você não precisa fazer tudo sozinho.
+                    </h2>
+
+                    <p>
+                        Cada pessoa possui uma história única. Dar o primeiro
+                        passo para cuidar de si pode transformar a forma como
+                        você se sente e encara os desafios do dia a dia.
+                    </p>
+
+                    <p>
+                        Se você sente que chegou o momento de começar,
+                        entre em contato para conversar e saber mais.
+                    </p>
+
+                    <a
+                        id="whatsappBtn"
+                        class="btn whatsapp"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💬 Falar pelo WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

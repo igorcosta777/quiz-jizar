@@ -1,0 +1,510 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #ffe1ec 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #d9d5ff 0%, transparent 35%),
+        #f7f5fa;
+
+    color: #272334;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* =========================
+   TELAS
+========================= */
+
+.tela {
+    display: none;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.tela.ativa {
+    display: block;
+    animation: aparecer 0.5s ease forwards;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 28px;
+
+    padding: 50px;
+
+    box-shadow:
+        0 25px 70px rgba(45, 35, 70, 0.12);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+.inicio-card {
+    text-align: center;
+    padding: 75px 50px;
+}
+
+.tag {
+    display: inline-block;
+
+    background: #f3e8ff;
+    color: #7b3fc6;
+
+    padding: 9px 17px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+.inicio-card h1 {
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.inicio-card p {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    color: #6d6878;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    border: none;
+    cursor: pointer;
+
+    border-radius: 14px;
+
+    padding: 16px 28px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.principal {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f45d4,
+            #c34f91
+        );
+
+    box-shadow:
+        0 12px 30px rgba(143, 69, 212, 0.3);
+
+    min-width: 200px;
+}
+
+.continuar {
+    width: 100%;
+
+    margin-top: 30px;
+
+    background: #8f45d4;
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(143, 69, 212, 0.2);
+}
+
+.continuar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-card {
+    max-width: 700px;
+    margin: auto;
+}
+
+.progresso {
+    margin-bottom: 35px;
+}
+
+.progresso span {
+    display: block;
+
+    color: #77717f;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.barra {
+    width: 100%;
+    height: 7px;
+
+    background: #eeeaf2;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.barra-preenchida {
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8f45d4,
+            #c34f91
+        );
+
+    border-radius: inherit;
+
+    transition: width 0.4s ease;
+}
+
+.quiz-card h2 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.opcoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.opcao {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    border-radius: 15px;
+
+    border: 2px solid #ece8f0;
+
+    background: #fff;
+
+    color: #393341;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.opcao:hover {
+    border-color: #b77ce4;
+
+    transform: translateX(3px);
+}
+
+.opcao.selecionada {
+    border-color: #8f45d4;
+
+    background: #f7efff;
+
+    color: #7133ad;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   TELA FINAL
+========================= */
+
+.final-card {
+    padding: 0;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+}
+
+.final-imagem {
+    min-height: 520px;
+
+    overflow: hidden;
+}
+
+.final-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.final-card:hover .final-imagem img {
+    transform: scale(1.04);
+}
+
+.final-conteudo {
+    padding: 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff 0%,
+            #f9f0ff 100%
+        );
+}
+
+.final-conteudo h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+.final-conteudo p {
+    color: #686271;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #20c76b,
+            #12a957
+        );
+
+    box-shadow:
+        0 12px 30px rgba(18, 169, 87, 0.25);
+}
+
+.whatsapp:hover {
+    box-shadow:
+        0 18px 35px rgba(18, 169, 87, 0.35);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 35px 25px;
+        border-radius: 22px;
+    }
+
+    .inicio-card {
+        padding: 55px 25px;
+    }
+
+    .final-card {
+        grid-template-columns: 1fr;
+    }
+
+    .final-imagem {
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    .final-conteudo {
+        padding: 40px 28px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        border-radius: 18px;
+        padding: 28px 20px;
+    }
+
+    .inicio-card {
+        padding: 45px 20px;
+    }
+
+    .inicio-card h1 {
+        font-size: 2.4rem;
+    }
+
+    .inicio-card p {
+        font-size: 16px;
+    }
+
+    .quiz-card h2 {
+        font-size: 1.55rem;
+    }
+
+    .opcao {
+        padding: 16px;
+
+        font-size: 15px;
+    }
+
+    .final-imagem {
+        min-height: 250px;
+    }
+
+    .final-conteudo {
+        padding: 35px 22px;
+    }
+
+    .final-conteudo h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
